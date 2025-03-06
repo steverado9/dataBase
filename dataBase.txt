@@ -1,0 +1,24 @@
+What is a database?
+This is a collection of data.
+Database allows us to organise data in a way that it is useful to us and it makes data management easy.
+
+    Database management System(DBMS)
+This is a collection of programs that allows us to access databases , work with data and it also allows controlled.
+accesss to database users.
+DBSM is like a piece of software that allows us to communicate with the database.
+and it allows us to update, delete, insert, lookup Whatever inside the software.
+ Types of DBMS
+They are both represented well by PostgreSQL, MONGODB.
+1)Relational DataBase: This consist of two or more tables with columns and rows.
+The relation between tables and field is called schema.
+All relational dataBase use something called SQL.
+with SQL, we are able to communicate with the backend.
+2)Non relational dataBase(NoSQL)
+A non relational dataBase or a MONGODB lets you build an application without having to define the schema first.
+with NoSQL we can just efine the schema as we go.
+MONGODB is document oriented i.e it stores information as documents.
+MONGODB query language helps communicate with the backend
+
+    How to set up PostgreSQL on our computer
+Download GUI
+
