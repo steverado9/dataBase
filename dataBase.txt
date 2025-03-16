@@ -5,20 +5,53 @@ Database allows us to organise data in a way that it is useful to us and it make
     Database management System(DBMS)
 This is a collection of programs that allows us to access databases , work with data and it also allows controlled.
 accesss to database users.
-DBSM is like a piece of software that allows us to communicate with the database.
+DBMS is like a piece of software that allows us to communicate with the database.
 and it allows us to update, delete, insert, lookup Whatever inside the software.
  Types of DBMS
 They are both represented well by PostgreSQL, MONGODB.
 1)Relational DataBase: This consist of two or more tables with columns and rows.
 The relation between tables and field is called schema.
-All relational dataBase use something called SQL.
+All relational dataBase use something called SQL(Structured Query Language).
 with SQL, we are able to communicate with the backend.
+SQL: This is a standard language for accessing and manipulating database.
 2)Non relational dataBase(NoSQL)
 A non relational dataBase or a MONGODB lets you build an application without having to define the schema first.
-with NoSQL we can just efine the schema as we go.
+with NoSQL we can just define the schema as we go.
 MONGODB is document oriented i.e it stores information as documents.
 MONGODB query language helps communicate with the backend
 
     How to set up PostgreSQL on our computer
-Download GUI
+Download PgAdmin
+    How to create a table in PgAdmin
+There are two ways
+1)right click "table", click on "create", click on Table
+here you can specify the table name, number of column and so on, then click save.
+2)Through writing queries
+right click on the created dataBase, go to query Tool
+write your code and click on "execute script"
+when you get a sucess message,
+right click your created database and refresh
+then go to schema, then Table to see the table created
+-Inserting content into the table
+-grabing content from the table
+-how to add another column to a pre existing column(ALTER TABLE),(UPDATE TABLE), SET, WHERE
+-SQL functions
+1)AVG()
+2)SUM()
+3)COUNT() etc
+    Join the tables
+In relational dataBase, we have a primary key and foreign key.
+-setting primary keys when creating a table is important.
+-primary key is a unique key to each row.
+schemas:having tables that are concerned with storing information specific to them and connecting them through a primary
+key and foreign key
+-A good way to manage your dataBase is to have small tables concerned with specific thing(seperation of concern)
+then join tables together to get information from them.
+-When you create a primary key, it creates another file that contains the keys
+we use the JOIN key word to join tables
+    Delete from table
+we can use the DELETE FROM and WHERE keyword to delete from the dataBase
+we can also use DROP keyword
+
+website https://www.techonthenet.com
 
