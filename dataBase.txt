@@ -22,19 +22,109 @@ MONGODB query language helps communicate with the backend
 
     How to set up PostgreSQL on our computer
 Download PgAdmin
+PgAdmin: This is an sql editor.
+The PgAdmin has one default dataBase which is the Postgres
     How to create a table in PgAdmin
-There are two ways
-1)right click "table", click on "create", click on Table
+A table is an object on a dataBase that contains data.
+creating a table means we have somewhere to store a data and view the data.
+    There are two ways
+1)right click "table", click on "create", click on Table.
 here you can specify the table name, number of column and so on, then click save.
-2)Through writing queries
-right click on the created dataBase, go to query Tool
-write your code and click on "execute script"
-when you get a sucess message,
+
+2)Through writing code in the queryTool
+-we write sql code on the queryTool.
+-ALways use single quotes for text strings
+-right click on the created dataBase, go to query Tool.
+-sql is not case sensitive(uppercase or lowercase).
+-CREAT TABLE- This is an sql keyword.
+-after using the 'CREAT TABLE' keyword, we add the table name and parenthesis.
+-next we add the column name inside the parenthesis.
+-next we need to specify the datatype of the column and its size ie 'VARCHAR'(varing character) and a parenthesis.
+-we specify a szie inside the parenthesis(200):This is the size of a VARCHAR column. add a comma and move to the next line
+-let's add another colume that contains number and datatype will be 'INTEGER'.
+-we dont need to specify size for 'INTEGER' cos it comes with a specific size.
+-once you are done with the create table, go out the parenthesis and add a semi colon.
+
+-once your done with the code,click on "execute script"
+-when you get a sucess message, the sql table has been created.
 right click your created database and refresh
 then go to schema, then Table to see the table created
--Inserting content into the table
--grabing content from the table
--how to add another column to a pre existing column(ALTER TABLE),(UPDATE TABLE), SET, WHERE
+
+    How to Inserting content into the table
+-we use the keyword 'INSERT INTO' tablename and a parenthesis to insert data into the table.
+-inside the parenthesis we write the names of the columns seperated by commas eg(product_name, price).
+-we go to the next line(not compolsory, just for readability) and use the keyword 'VALUES' with a parenthesis.
+-inside the parenthesis of values, we insert the vales for text with a quote and number without a quote
+ and then add a semicolon outside the parenthesis eg('jeans', 50);.
+-click the execute button again to run our statements
+we get an error because we are re-running the 'CREATE TABLE' with the same tableName
+how do we solve this error
+1)delete the CREATE TABLE statement
+2)Lets say we still want to keep the statement
+Highlight the INSERT statement and click on the execute script,
+we get a sucess message
+
+    How do we see(grab) content(data) in our table
+we use the 'SELECT' keyword and the specified column you want to see or you can use the '*' keyword to see all the columns
+then go to the next line and use the keyword 'FROM' and the specific table you want to see the data then add a semi colon
+eg1)  SELECT * 
+    FROM tableName;
+Highlight the SELECT statement and click execute script.
+
+eg2) SELECT product_name, price 
+     FROM tableName;
+using the WHERE keyword to specify where we want to see in the row
+    SELECT product_name, price 
+     FROM tableName
+     WHERE columnName = 'jeans';
+highlight code and run
+
+    How to add more values to an existing table
+-You can simple change the VALUES inside the existing code and run it.
+
+    How to change(update) data in the table
+we can do this by using the keyword 'UPDATE'
+-we start with the keyword 'UPDATE'
+-then we specify the tableName
+-move the next line and add the SET keyword and the columnName = value
+note: if you dont add the WHERE keyword, it will update all the records in the table.
+eg 1)UPDATE tableName
+    SET columnName = value;
+
+eg2) UPDATE tableName
+    SET colunmName = 'newvalue'
+    WHERE columnName = 'oldvalue';
+we can also use the 'OR' keyword to update another column ie, WHERE columnane = 'value' OR columnname = 'value';
+
+    How to delete data
+This can be done using the 'DELETE' keyword.
+-we start with the 'DELETE' FROM tableName
+-we move to the next line and use the 'WHERE' keyword to specify which row to delete from
+note: if you use the delete keyword without specifying the row, all rows will be deleted
+click on the run script and you will get a sucess message 
+
+    How to add another column to a pre existing column
+we use the 'ALTER' keyword to change the table itself ie creating a new column
+-we start with the keyword 'ALTER TABLE tablename'
+-in the next line, we use the keyword 'ADD COLUMN columnName datatype(VARCHAR or INTEGER)' COLUMN is optional
+then add semi colon.
+example1
+    ALTER TABLE product
+    ADD COLUMN in_stock VARCHAR(3);
+The 'ALTER' keyword can also be used to alter a colum that already exist.
+example2
+    ALTER TABLE product
+    ALTER COLUMN in_stock TYPE INTEGER;
+
+    Join the tables
+In relational dataBase, we have a primary key and foreign key.
+-setting primary keys when creating a table is important.
+-primary key is a unique key to each row.
+-foreign key is a column that refers to the primary key in another table
+
+
+
+    How to add another column to a pre existing column(ALTER TABLE),(UPDATE TABLE), SET, WHERE
 -SQL functions
 1)AVG()
 2)SUM()
