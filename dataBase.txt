@@ -116,32 +116,27 @@ example2
     ALTER TABLE product
     ALTER COLUMN in_stock TYPE INTEGER;
 
-    Join the tables
-In relational dataBase, we have a primary key and foreign key.
--setting primary keys when creating a table is important.
--primary key is a unique key to each row.
--foreign key is a column that refers to the primary key in another table
-
-
-
-    How to add another column to a pre existing column(ALTER TABLE),(UPDATE TABLE), SET, WHERE
 -SQL functions
 1)AVG()
 2)SUM()
 3)COUNT() etc
+
     Join the tables
 In relational dataBase, we have a primary key and foreign key.
 -setting primary keys when creating a table is important.
--primary key is a unique key to each row.
-schemas:having tables that are concerned with storing information specific to them and connecting them through a primary
-key and foreign key
+-primary key is a unique key to each row in a table.
+-foreign key is a column that refers to the primary key in another table
 -A good way to manage your dataBase is to have small tables concerned with specific thing(seperation of concern)
 then join tables together to get information from them.
--When you create a primary key, it creates another file that contains the keys
-we use the JOIN key word to join tables
-    Delete from table
-we can use the DELETE FROM and WHERE keyword to delete from the dataBase
-we can also use DROP keyword
+
+we use the 'JOIN' keyword to join tables togther.
+eg  SELECT * 
+    FROM firstTableName
+    JOIN secondTableName 
+    ON firstTableName.primaryKey = secondTableName.ForeignKey;
+
+
 
 website https://www.techonthenet.com
+Knexjs
 
